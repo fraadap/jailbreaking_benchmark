@@ -7,7 +7,14 @@ load_dotenv()
 
 class CompleteModelTester:
     def __init__(self):
-        self.token = ""
+        
+    
+
+        # Load environment variables from .env file
+        load_dotenv()
+
+        # Access the TOKEN
+        self.token = os.getenv('TOKEN')
         self.base_url = "https://models.inference.ai.azure.com"
         self.headers = {
             'Authorization': f'Bearer {self.token}',

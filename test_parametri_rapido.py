@@ -8,10 +8,16 @@ Modifica i valori e confronta i risultati!
 
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
 class ParameterTester:
     def __init__(self):
-        self.token = ""
+        # Load environment variables from .env file
+        load_dotenv()
+
+        # Access the TOKEN
+        self.token = os.getenv('TOKEN')
         self.base_url = "https://models.inference.ai.azure.com"
         self.headers = {
             'Authorization': f'Bearer {self.token}',

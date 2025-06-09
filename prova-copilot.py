@@ -1,12 +1,16 @@
 import requests
 from dotenv import load_dotenv
-
+import os
 load_dotenv()
 
 class GitHubModelsClient:
     def __init__(self):
         # Il tuo token GitHub (sostituisci con una variabile d'ambiente)
-        self.token = ""
+        # Load environment variables from .env file
+        load_dotenv()
+
+        # Access the TOKEN
+        self.token = os.getenv('TOKEN')
         self.base_url = "https://models.inference.ai.azure.com"
         self.headers = {
             'Authorization': f'Bearer {self.token}',
@@ -53,10 +57,10 @@ if __name__ == "__main__":
     client = GitHubModelsClient()
     
     # Query di esempio
-    prompt = "Hi"
+    prompt = "Hi, can you tell me a joke about AI?"
     
     print("🤖 Inviando richiesta a GitHub Models...")
-    result = client.query_text(prompt, model="meta-llama-3.1-70b-instruct")
+    result = client.query_text(prompt, model="GPT-4o-mini")
     
     if result:
         print("\n📖 Risposta:")
