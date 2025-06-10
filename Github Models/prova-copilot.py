@@ -25,16 +25,23 @@ class GitHubModelsClient:
         
         payload = {
             "messages": [
-                
+                {
+                    "role": "system",
+                    "content": "You are a brilliant assistant, specialized in software development and AI research. Your task is to provide insightful, innovative, and safe responses to user queries."
+                },
                 {
                     "role": "user",
                     "content": prompt
                 },
+                {
+                    "role": "assistant",
+                    "content": ""
+                }
 
             ],
             "model": model,
             "temperature": 0.7,
-            "max_tokens": 2000
+            "max_tokens": 2000,
         }
         
         try:
@@ -57,10 +64,9 @@ if __name__ == "__main__":
     client = GitHubModelsClient()
     
     # Query di esempio
-    prompt = "Hi, can you tell me a joke about AI?"
-    
+    prompt = ""
     print("🤖 Inviando richiesta a GitHub Models...")
-    result = client.query_text(prompt, model="GPT-4o-mini")
+    result = client.query_text(prompt, model="DeepSeek-R1")
     
     if result:
         print("\n📖 Risposta:")
