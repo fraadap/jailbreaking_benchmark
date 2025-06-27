@@ -1,80 +1,135 @@
 [
   {
     "model": "gemma3_1b",
-    "number_jailbroken": 171,
-    "number_safe": 416,
-    "success_rate": 70.86882453151618
+    "temperature": 0.5,
+    "number_jailbroken": 168,
+    "number_safe": 419,
+    "success_rate": 71.37989778534923
   },
   {
-    "model": "gemma3_12b",
-    "number_jailbroken": 227,
-    "number_safe": 360,
-    "success_rate": 61.32879045996593
+    "model": "gemma3_1b",
+    "temperature": 1.0,
+    "number_jailbroken": 168,
+    "number_safe": 419,
+    "success_rate": 71.37989778534923
   },
   {
-    "model": "qwen3_0.6b",
-    "number_jailbroken": 483,
-    "number_safe": 104,
-    "success_rate": 17.717206132879046
+    "model": "gemma3_1b",
+    "temperature": 1.5,
+    "number_jailbroken": 182,
+    "number_safe": 405,
+    "success_rate": 68.99488926746167
   },
   {
-    "model": "qwen3_4b",
-    "number_jailbroken": 215,
-    "number_safe": 372,
-    "success_rate": 63.37308347529813
+    "model": "gemma3_1b",
+    "temperature": 2,
+    "number_jailbroken": 248,
+    "number_safe": 339,
+    "success_rate": 57.75127768313458
   },
   {
     "model": "qwen3_14b",
+    "temperature": 0.5,
+    "number_jailbroken": 184,
+    "number_safe": 403,
+    "success_rate": 68.6541737649063
+  },
+  {
+    "model": "qwen3_14b",
+    "temperature": 1.0,
+    "number_jailbroken": 190,
+    "number_safe": 397,
+    "success_rate": 67.6320272572402
+  },
+  {
+    "model": "qwen3_14b",
+    "temperature": 1.5,
+    "number_jailbroken": 182,
+    "number_safe": 405,
+    "success_rate": 68.99488926746167
+  },
+  {
+    "model": "qwen3_14b",
+    "temperature": 2,
     "number_jailbroken": 192,
     "number_safe": 395,
     "success_rate": 67.29131175468484
   },
   {
-    "model": "phi3_3.8b",
-    "number_jailbroken": 266,
-    "number_safe": 321,
-    "success_rate": 54.68483816013629
+    "model": "phi3_14b",
+    "temperature": 0.5,
+    "number_jailbroken": 249,
+    "number_safe": 338,
+    "success_rate": 57.5809199318569
   },
   {
     "model": "phi3_14b",
-    "number_jailbroken": 247,
-    "number_safe": 340,
-    "success_rate": 57.921635434412266
+    "temperature": 1.0,
+    "number_jailbroken": 256,
+    "number_safe": 331,
+    "success_rate": 56.38841567291312
+  },
+  {
+    "model": "phi3_14b",
+    "temperature": 1.5,
+    "number_jailbroken": 289,
+    "number_safe": 298,
+    "success_rate": 50.76660988074957
+  },
+  {
+    "model": "phi3_14b",
+    "temperature": 2,
+    "number_jailbroken": 357,
+    "number_safe": 230,
+    "success_rate": 39.182282793867124
   },
   {
     "model": "mistral_7b",
-    "number_jailbroken": 457,
-    "number_safe": 130,
-    "success_rate": 22.14650766609881
+    "temperature": 0.5,
+    "number_jailbroken": 448,
+    "number_safe": 139,
+    "success_rate": 23.679727427597953
   },
   {
-    "model": "mistral-nemo_12b",
-    "number_jailbroken": 459,
-    "number_safe": 128,
-    "success_rate": 21.80579216354344
+    "model": "mistral_7b",
+    "temperature": 1.0,
+    "number_jailbroken": 425,
+    "number_safe": 125,
+    "success_rate": 22.727272727272727
   },
   {
-    "model": "deepseek-r1_1.5b",
-    "number_jailbroken": 89,
-    "number_safe": 498,
-    "success_rate": 84.8381601362862
-  },
-  {
-    "model": "deepseek-r1_7b",
-    "number_jailbroken": 62,
-    "number_safe": 525,
-    "success_rate": 89.43781942078365
-  },
-  {
-    "model": "deepseek-r1_8b",
-    "number_jailbroken": 70,
-    "number_safe": 517,
-    "success_rate": 88.07495741056218
+    "model": "mistral_7b",
+    "temperature": 1.5,
+    "number_jailbroken": 275,
+    "number_safe": 50,
+    "success_rate": 15.384615384615385
   },
   {
     "model": "deepseek-r1_14b",
-    "number_jailbroken": 16,
-    "number_safe": 571,
-    "success_rate": 97.27427597955707
+    "temperature": 0.5,
+    "number_jailbroken": 18,
+    "number_safe": 569,
+    "success_rate": 96.9335604770017
+  },
+  {
+    "model": "deepseek-r1_14b",
+    "temperature": 1.0,
+    "number_jailbroken": 22,
+    "number_safe": 565,
+    "success_rate": 96.25212947189097
+  },
+  {
+    "model": "deepseek-r1_14b",
+    "temperature": 1.5,
+    "number_jailbroken": 30,
+    "number_safe": 557,
+    "success_rate": 94.8892674616695
+  },
+  {
+    "model": "deepseek-r1_14b",
+    "temperature": 2,
+    "number_jailbroken": 67,
+    "number_safe": 520,
+    "success_rate": 88.58603066439524
   }
 ]
