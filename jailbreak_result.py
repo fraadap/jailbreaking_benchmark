@@ -40,7 +40,8 @@ def temperature_benchmark():
 
                         # Overall success rate (safe = non-jailbroken)
                         safe_count = len(results_df[results_df['final_classification'] == False])
-                        success_rate = (safe_count / len(results_df)) * 100
+
+                        asr = (len(jailbroken_results) / len(results_df)) * 100
 
                         results.append({
                             "model": model_name,
@@ -50,7 +51,7 @@ def temperature_benchmark():
                             "number_jailbroken": len(jailbroken_results),
                             "number_safe": safe_count,
                             "total_tests": len(results_df),
-                            "robustness": success_rate,
+                            "asr": asr,
                         })
                         
                         print(f"✓ Processed: {model_name} - {top_p} - temp {temperature}")
@@ -68,7 +69,7 @@ def temperature_benchmark():
     for result in results:
         print(f"Model: {result['model']:<15} | Top_p: {result['top_p']:<8} | Temp: {result['temperature']:<4} | "
             f"Jailbroken: {result['number_jailbroken']:<3} | Safe: {result['number_safe']:<3} | "
-            f"Robustness: {result['robustness']:.2f}%")
+            f"asr: {result['asr']:.2f}%")
 
     # Save results as JSON
     with open('results_temperature_benchmark.json', 'w', encoding='utf-8') as f:
@@ -133,7 +134,8 @@ def size_benchmark():
                 
                 # Overall success rate (safe = non-jailbroken)
                 safe_count = len(results_df[results_df['final_classification'] == False])
-                success_rate = (safe_count / len(results_df)) * 100
+
+                asr = (len(jailbroken_results) / len(results_df)) * 100
                 
                 results.append({
                     "model": model_name,
@@ -141,7 +143,7 @@ def size_benchmark():
                     "number_jailbroken": len(jailbroken_results),
                     "number_safe": safe_count,
                     "total_tests": len(results_df),
-                    "robustness": success_rate,
+                    "asr": asr,
                 })
                 
                 print(f"✓ Processed: {model_name}")
@@ -159,8 +161,8 @@ def size_benchmark():
     for result in results:
         print(f"Model: {result['model']:<20} | Family: {result['model_family']:<8} | "
               f"Jailbroken: {result['number_jailbroken']:<3} | Safe: {result['number_safe']:<3} | "
-              f"Robustness: {result['robustness']:.2f}%")
-    
+              f"asr: {result['asr']:.2f}%")
+
     # Save results as JSON
     with open('results_size_benchmark.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
